@@ -1,0 +1,564 @@
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Hope | Inspiring brighter futures through promoting quality education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            400: '#fbbf24', // Amber 400
+                            500: '#f59e0b', // Amber 500
+                            900: '#1e293b', // Slate 900
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        /* Watermark style */
+        .watermark-text {
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.03);
+            color: transparent;
+        }
+    </style>
+</head> 
+
+<body class="antialiased bg-white text-slate-600 font-sans selection:bg-brand-400 selection:text-brand-900 relative">
+
+    <!-- Fixed Background Watermark -->
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
+        <div class="watermark-text text-[20vw] font-bold leading-none tracking-tighter opacity-100 select-none rotate-12">
+            HOPE
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="absolute w-full z-50 top-0 start-0 border-b border-white/10 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+            <a href="#home" class="group cursor-pointer flex items-center" aria-label="Project Hope home">
+                <img src="logo.png" alt="Project Hope logo" class="h-10 w-auto object-contain">
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium text-white/90 hover:text-brand-400 transition-colors">Home</a>
+                <a href="#about" class="text-sm font-medium text-white/90 hover:text-brand-400 transition-colors">About</a>
+                <a href="#news" class="text-sm font-medium text-white/90 hover:text-brand-400 transition-colors">News</a>
+                <a href="#contact" class="text-sm font-medium text-white/90 hover:text-brand-400 transition-colors">Contact</a>
+                <a href="https://www.gofundme.com/f/7n9hgh-project-hope" class="text-sm font-medium text-white/90 hover:text-brand-400 transition-colors">Donate</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <span class="hidden sm:block text-sm font-medium text-white/90">EN <i data-lucide="chevron-down"
+                        class="inline w-3 h-3 ml-1"></i></span>
+                <a href="https://www.gofundme.com/f/7n9hgh-project-hope"
+                    class="w-10 h-10 rounded-full bg-brand-400 hover:bg-brand-500 text-white flex items-center justify-center transition-all shadow-lg shadow-brand-400/20"
+                    aria-label="Donate">
+                    <i data-lucide="hand-heart" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&amp;w=2070&amp;auto=format&amp;fit=crop"
+                alt="Children smiling" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-slate-900/90"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
+            <div class="inline-flex items-center gap-2 mb-6 fade-in-up">
+                <span class="h-px w-8 bg-brand-400"></span>
+                <span class="text-brand-400 font-medium tracking-wide uppercase text-sm">Project Hope</span>
+                <span class="h-px w-8 bg-brand-400"></span>
+            </div>
+
+            <h1
+                class="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tight text-white mb-8 leading-[1.1] fade-in-up delay-100">
+                Inspiring <br class="hidden md:block">
+                brighter <span class="text-brand-400">futures.</span>
+            </h1>
+
+            <p
+                class="text-lg md:text-xl text-slate-200 mb-12 max-w-2xl mx-auto font-normal leading-relaxed fade-in-up delay-200">
+                Project Hope is seeking to enhance access to quality education for young people from disadvantaged
+                backgrounds in Pakistan. We partner with like-minded people to promote education as a means to a
+                brighter future for the next generation of Pakistan.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5 fade-in-up delay-300">
+                <a href="#about"
+                    class="min-w-[180px] px-8 py-4 border border-brand-400 text-brand-400 hover:bg-brand-400 hover:text-slate-900 rounded-full font-medium text-base transition-all duration-300">
+                    Find out more
+                </a>
+                <a href="https://www.gofundme.com/f/7n9hgh-project-hope"
+                    class="min-w-[180px] px-8 py-4 bg-white text-slate-900 hover:bg-slate-100 rounded-full font-medium text-base transition-all duration-300">
+                    Donate now
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2" aria-hidden="true">
+            <div class="w-2.5 h-2.5 rounded-full bg-white opacity-100"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-white opacity-40"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-white opacity-40"></div>
+        </div>
+    </section>
+
+    <!-- Yellow Band Section -->
+    <section class="bg-brand-400 py-20 relative z-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-4xl font-semibold text-slate-900 tracking-tight">
+                We believe in promoting a world where every child can have access to quality education.
+            </h2>
+            <div class="h-32"></div>
+        </div>
+    </section>
+
+    <!-- Overlapping Cards Section -->
+    <section class="relative z-30 -mt-40 pb-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-10 rounded-xl shadow-xl shadow-slate-200/50 text-center border-b-4 border-transparent hover:border-brand-400 transition-all group">
+                    <div class="w-16 h-16 mx-auto mb-6 text-brand-400 group-hover:scale-110 transition-transform">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                            <path d="M12 2l3 6 6 .9-4.5 4.4 1.1 6.2L12 16.9 6.4 19.5l1.1-6.2L3 8.9 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-4">Our Beliefs</h3>
+                    <p class="text-base text-slate-500 mb-6 leading-relaxed">
+                        Our mission is to invest in the education of young people from disadvantaged backgrounds in
+                        Pakistan to empower and inspire brighter futures for the next generation.
+                    </p>
+                    <a href="#about"
+                        class="text-sm font-medium text-slate-400 uppercase tracking-wider group-hover:text-brand-400 transition-colors">Learn
+                        More</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-10 rounded-xl shadow-xl shadow-slate-200/50 text-center border-b-4 border-brand-400 hover:border-brand-400 transition-all group">
+                    <div class="w-16 h-16 mx-auto mb-6 text-brand-400 group-hover:scale-110 transition-transform">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                            <path d="M12 21s-7-4.4-9.5-8.5C.6 9 2.4 5.9 6 6c2 0 3.2 1.2 4 2.2.8-1 2-2.2 4-2.2 3.6-.1 5.4 3 3.5 6.5C19 16.6 12 21 12 21z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-4">How You Can Help</h3>
+                    <p class="text-base text-slate-500 mb-6 leading-relaxed">
+                        Whether you donate once or set up regular giving, your contribution can make a life-changing
+                        difference.
+                    </p>
+                    <a href="https://www.gofundme.com/f/7n9hgh-project-hope"
+                        class="text-sm font-medium text-slate-400 uppercase tracking-wider group-hover:text-brand-400 transition-colors">Donate</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white p-10 rounded-xl shadow-xl shadow-slate-200/50 text-center border-b-4 border-transparent hover:border-brand-400 transition-all group">
+                    <div class="w-16 h-16 mx-auto mb-6 text-brand-400 group-hover:scale-110 transition-transform">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+                            <path d="M16 11c1.7 0 3 1.3 3 3v6H5v-6c0-1.7 1.3-3 3-3"></path>
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+                            <path d="M12 14v3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-slate-900 mb-4">Partner With Us</h3>
+                    <p class="text-base text-slate-500 mb-6 leading-relaxed">
+                        We work with local organisations and families to provide educational resources to
+                        underprivileged children.
+                    </p>
+                    <a href="#contact"
+                        class="text-sm font-medium text-slate-400 uppercase tracking-wider group-hover:text-brand-400 transition-colors">Contact</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-400/20 rounded-full blur-2xl"></div>
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img src="prina.png"
+                        alt="Prina Scot" class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="relative z-10">
+                    <h2 class="text-4xl lg:text-5xl font-semibold text-slate-900 mb-8 tracking-tight leading-tight">
+                        Prina Scot <span class="text-brand-400">|</span> Our Founder
+                    </h2>
+
+                    <p class="text-lg text-slate-500 mb-6 leading-relaxed">
+                        Prina Scot is the founder of Project Hope, a non-profit venture seeking to inspire brighter
+                        futures through promoting education in the developing world.
+                    </p>
+
+                    <p class="text-lg text-slate-500 mb-6 leading-relaxed">
+                        Prina was born in a rural Punjabi village in Pakistan and migrated with her immediate family to
+                        Australia as a refugee in 1989 at the age of six. She is currently employed as a Guidance
+                        Officer with Education Queensland. Her career as an educator has spanned more than 20 years
+                        across early childhood and secondary school settings in Australia and in Asia.
+                    </p>
+
+                    <p class="text-lg text-slate-500 mb-10 leading-relaxed">
+                        Prina has a passion for supporting young people to rise above challenges, particularly young
+                        people from under-privileged and disadvantaged backgrounds in developing countries. She believes
+                        in the power education has to inspire brighter futures and has a vision to raise awareness and
+                        support in order to serve under-serviced communities.
+                    </p>
+
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 mb-10">
+                        <p class="text-sm font-semibold text-slate-700 uppercase tracking-wider mb-3">Qualifications</p>
+                        <ul class="space-y-2 text-slate-600">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-400 mt-0.5"></i>
+                                <span>Bachelor of Secondary Education / Bachelor of Applied Science (Human Movement Studies), Queensland University of Technology</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-400 mt-0.5"></i>
+                                <span>Master of Counselling, Christian Heritage College</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-5 h-5 text-brand-400 mt-0.5"></i>
+                                <span>Master of Education (Guidance Counselling), University of Southern Queensland</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://www.gofundme.com/f/7n9hgh-project-hope"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-brand-400 text-white rounded-full font-medium text-lg hover:bg-brand-500 transition-all shadow-lg shadow-brand-400/30">
+                        How you can help
+                        <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News / Causes Grid -->
+    <section id="news" class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-brand-400 font-medium tracking-wider uppercase text-sm mb-2 block">News</span>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-slate-900 mb-6">Our current causes</h2>
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto">
+                    Supporting families and communities in Pakistan through access to education.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="w-14 h-14 rounded-full bg-brand-400/10 text-brand-400 flex items-center justify-center mb-6 group-hover:bg-brand-400 group-hover:text-white transition-colors">
+                        <i data-lucide="home" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-slate-900 mb-3 tracking-tight">
+                        Supporting Families in Rural Pakistan
+                    </h3>
+                    <p class="text-lg text-slate-500 mb-4">
+                        The Shah family live in a rural Punjabi village in Pakistan. They rely on selling produce from their farming and livestock for income.
+                    </p>
+                    <p class="text-sm text-slate-400">Prina Scot · February 7, 2022</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="w-14 h-14 rounded-full bg-brand-400/10 text-brand-400 flex items-center justify-center mb-6 group-hover:bg-brand-400 group-hover:text-white transition-colors">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-slate-900 mb-3 tracking-tight">The Gill Family</h3>
+                    <p class="text-lg text-slate-500 mb-4">
+                        Sara Gill is a 40-year-old widow living in a rural Punjabi village in Pakistan. Her husband died of tuberculosis a few years ago.
+                    </p>
+                    <p class="text-sm text-slate-400">Prina Scot · February 7, 2022</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
+                    <div class="w-14 h-14 rounded-full bg-brand-400/10 text-brand-400 flex items-center justify-center mb-6 group-hover:bg-brand-400 group-hover:text-white transition-colors">
+                        <i data-lucide="school" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-slate-900 mb-3 tracking-tight">Abba Home Orphanage for Girls</h3>
+                    <p class="text-lg text-slate-500 mb-4">
+                        Abba Home Orphanage for Girls is situated in Lahore, Pakistan. It is currently housing 50 Pakistani orphan girls aged 6 and above.
+                    </p>
+                    <p class="text-sm text-slate-400">Prina Scot · January 10, 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 text-white/5 transform translate-y-1/4 translate-x-1/4 pointer-events-none">
+            <i data-lucide="graduation-cap" class="w-96 h-96"></i>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-8">
+                        How you can help
+                    </h2>
+
+                    <div class="space-y-10">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Give a donation</h3>
+                            <p class="text-xl text-slate-400 leading-relaxed">
+                                Whether you would like to offer a once-off donation or set up regular donations, your
+                                contribution will make a life-changing difference. Please contact us today if you would
+                                like to make a donation.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-semibold text-white mb-2">Offer a scholarship</h3>
+                            <p class="text-xl text-slate-400 leading-relaxed">
+                                Your gift will help equip children in need with necessary resources, training and
+                                education while offering the promise of a brighter future. You can make a difference
+                                today by offering a scholarship.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-6 h-6 text-brand-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-brand-400 uppercase tracking-wide mb-1">Email</p>
+                                <a href="mailto:contactus@projecthope.charity"
+                                    class="text-xl text-white hover:text-brand-400 transition-colors break-all">
+                                    contactus@projecthope.charity
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Donation Card -->
+                <div class="bg-brand-400 rounded-2xl p-10 text-slate-900 relative shadow-2xl">
+                    <div class="flex justify-between items-start mb-10">
+                        <div>
+                            <p class="text-slate-800 text-sm font-semibold uppercase tracking-wider mb-2">Project Hope</p>
+                            <h3 class="text-3xl font-bold tracking-tight">Donate now</h3>
+                        </div>
+                        <i data-lucide="hand-heart" class="w-8 h-8 text-slate-800"></i>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <p class="text-sm font-medium text-slate-700 uppercase tracking-wider mb-1">To make a donation</p>
+                            <p class="text-lg text-slate-800">
+                                Please contact us and we will guide you through the best way to contribute.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/20 rounded-xl p-6 backdrop-blur-sm border border-slate-900/10">
+                            <p class="text-sm font-medium text-slate-800 uppercase tracking-wider mb-2">Contact email</p>
+                            <p class="text-2xl md:text-3xl font-mono font-bold tracking-tight select-all break-all">
+                                contactus@projecthope.charity
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+                            <a href="mailto:contactus@projecthope.charity?subject=Donation%20to%20Project%20Hope"
+                                class="w-full inline-flex items-center justify-center px-6 py-3 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all">
+                                Email to donate
+                                <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                            </a>
+                            <a href="mailto:contactus@projecthope.charity?subject=Scholarship%20support%20for%20Project%20Hope"
+                                class="w-full inline-flex items-center justify-center px-6 py-3 bg-white text-slate-900 rounded-full font-medium hover:bg-slate-100 transition-all">
+                                Offer a scholarship
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center pt-8 border-t border-slate-900/10">
+                        <p class="text-sm font-medium text-slate-800">
+                            Inspiring brighter futures through promoting quality education
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                <div>
+                    <span class="text-brand-400 font-medium tracking-wider uppercase text-sm mb-2 block">Contact</span>
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-slate-900 mb-6">Contact Project Hope</h2>
+                    <p class="text-xl text-slate-500 mb-8 leading-relaxed">
+                        If you would like to partner with Project Hope to support access to education for young people from disadvantaged backgrounds in Pakistan, please contact us today.
+                    </p>
+
+                    <div class="flex items-start gap-4 mb-10">
+                        <div class="w-12 h-12 rounded-full bg-slate-900/5 flex items-center justify-center shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6 text-brand-400"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-500 uppercase tracking-wide mb-1">Email Address</p>
+                            <a href="mailto:contactus@projecthope.charity"
+                                class="text-xl text-slate-900 hover:text-brand-400 transition-colors break-all">
+                                contactus@projecthope.charity
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6">
+                        <p class="text-sm font-semibold text-slate-700 uppercase tracking-wider mb-3">Mailing list</p>
+                        <p class="text-slate-600 mb-4">
+                            Sign up to our mailing list for the latest news and updates about Project Hope.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" placeholder="Email"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-400">
+                            <button
+                                class="px-6 py-3 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-all">
+                                Sign up
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 p-8">
+                    <h3 class="text-2xl font-semibold text-slate-900 mb-6">Fill out the form below and we will be in touch</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-600 mb-1">First Name</label>
+                                <input type="text" placeholder="First Name"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-400">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-600 mb-1">Last Name</label>
+                                <input type="text" placeholder="Last Name"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-400">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-600 mb-1">Email</label>
+                            <input type="email" placeholder="Email"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-400">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-600 mb-1">Phone</label>
+                            <input type="tel" placeholder="Phone"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-400">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-600 mb-1">Message</label>
+                            <textarea rows="5" placeholder="Type your message..."
+                                class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-400"></textarea>
+                        </div>
+
+                        <button type="button"
+                            class="w-full inline-flex items-center justify-center px-8 py-4 bg-brand-400 text-white rounded-full font-medium text-lg hover:bg-brand-500 transition-all shadow-lg shadow-brand-400/30">
+                            Send message
+                            <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-white/10 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-brand-400 flex items-center justify-center text-slate-900">
+                    <i data-lucide="heart" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span class="text-lg font-medium text-white">Project Hope</span>
+            </div>
+
+            <p class="text-base text-slate-400">
+                Project Hope is a non-profit venture seeking to enhance access to quality education for young people from disadvantaged backgrounds in Pakistan.
+            </p>
+
+            <div class="flex gap-6">
+                <a href="#home"
+                    class="text-sm font-medium text-white/80 hover:text-brand-400 transition-colors">Home</a>
+                <a href="#about"
+                    class="text-sm font-medium text-white/80 hover:text-brand-400 transition-colors">About</a>
+                <a href="#news"
+                    class="text-sm font-medium text-white/80 hover:text-brand-400 transition-colors">News</a>
+                <a href="#contact"
+                    class="text-sm font-medium text-white/80 hover:text-brand-400 transition-colors">Contact</a>
+                <a href="https://www.gofundme.com/f/7n9hgh-project-hope"
+                    class="text-sm font-medium text-white/80 hover:text-brand-400 transition-colors">Donate</a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-slate-500">Contact: <a class="hover:text-brand-400 transition-colors" href="mailto:contactus@projecthope.charity">contactus@projecthope.charity</a></p>
+            <p class="text-sm text-slate-500">© Project Hope 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
