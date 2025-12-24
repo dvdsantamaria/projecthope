@@ -582,12 +582,16 @@
             class="max-w-7xl mx-auto px-6 mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
             <p class="text-sm text-slate-500">Contact: <a class="hover:text-brand-400 transition-colors"
                     href="mailto:contact@projecthope.com.au">contact@projecthope.com.au</a></p>
-            <p class="text-sm text-slate-500">© Project Hope 2025</p>
+            <p class="text-sm text-slate-500">© Project Hope <span id="current-year">2025</span></p>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
+        const yearEl = document.getElementById("current-year");
+        if (yearEl) {
+            yearEl.textContent = String(new Date().getFullYear());
+        }
     </script>
 
 </body>
